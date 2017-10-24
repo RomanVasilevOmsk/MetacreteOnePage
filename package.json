@@ -1,0 +1,36 @@
+{
+  "name": "metacrete",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "roman",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-base64": "^1.3.4",
+    "gulp-inline-base64": "^0.1.5",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-stylus": "^2.6.0",
+    "gulp-tinypng": "^1.0.2"
+  },
+  "dependencies": {
+    "css-mqpacker": "^6.0.1",
+    "gulp-file-include": "^1.2.0",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-uglifycss": "^1.0.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanVasilevOmsk/Metacrete.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RomanVasilevOmsk/Metacrete/issues"
+  },
+  "homepage": "https://github.com/RomanVasilevOmsk/Metacrete#readme",
+  "description": ""
+}

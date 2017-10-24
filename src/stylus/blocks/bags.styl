@@ -1,0 +1,76 @@
+.bags
+  width 100%
+  max-width 1150px
+  display inline-block
+  position absolute
+  @media  (max-height: 768px) and (max-width : 1024px)
+    display none
+
+  &__image
+    float left
+    padding-left 15px
+
+  &__item
+    height 200px
+    z-index 100
+    width 120px
+    position absolute
+    bottom 20px
+    overflow visible!important
+    z-index 10
+
+    &:hover
+      cursor pointer
+      animation-name: unset;
+
+  &__item-1
+    left 4%
+
+  &__item-2
+    left 19%
+
+  &__item-3
+    left 33%
+
+  &__item-4
+    left 47%
+    @media (max-width: 810px)
+      display none
+
+  &__item-5
+    left 61%
+    @media (max-width: 1150px)
+      display none
+
+
+  &__title
+    width 150px
+    display inline-block
+    background-color #fcda14
+    font-weight 400
+    height 35px
+    text-align center
+    color #000
+    float left
+    margin -70px 0 0 0
+    outline 2px solid #0d0a0a
+    outline-offset -5px
+    padding 3px 0 0 0
+
+
+    &:after, &:before
+      content ""
+      float left
+      margin-top -3px
+      border 19px solid #fcda14
+      z-index 9999
+
+
+    &:after
+      margin-left -36px
+      border-left-color transparent
+
+    &:before
+      float right
+      margin-right -36px
+      border-right-color transparent

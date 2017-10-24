@@ -1,0 +1,86 @@
+.header
+  max-width 100%
+
+  &__inner
+    //max-width 1200px
+    margin auto
+    position relative
+
+
+    //@media only screen and (max-width: 512px)
+    //  padding 0 7px
+  &__phone
+    font-family 'PT Sans', sans-serif
+    font-size 28px
+    line-height 1.5
+    margin .7em 2em 0 0
+    text-align right
+    color #fcda14
+    text-decoration none
+    @media (max-width: 555px)
+      text-align center
+      width 100%
+      display block
+
+  &__mail
+    color #fcda14
+    font-size 20px
+    line-height 1.5
+    display block
+    margin 0 3em 0 0
+    text-align right
+    text-decoration none
+    @media (max-width: 414px)
+      text-align center
+      margin 0
+
+  &__desc
+    color #fff
+    font-size 24px
+    font-weight 400
+    text-align left
+    @media (max-width: 890px)
+      font-size 20px
+
+  &__item
+    &--left
+      left 0
+      position absolute
+      z-index 1
+
+    &--right
+      right 15px
+      top 30px
+      position absolute
+      z-index 1
+      @media (max-width: 555px)
+        top 0
+        right 0
+        width 100%
+        margin 0 auto
+        background-color rgba(0, 0, 0, 0.32)
+
+    &--desc
+      left 0
+      right 0
+      margin 0 auto
+      position absolute
+      z-index 1
+      width 270px
+      margin-top 20px
+      top 15px
+      &:before
+        content: ""
+        background url(../images/header/head_shadow.png) no-repeat
+        display inline-block
+        width 30px
+        height 110px
+        background-position 0 0px
+        float left
+        margin -7px 0 0 0
+
+
+      @media (max-width: 890px)
+        display none
+
+

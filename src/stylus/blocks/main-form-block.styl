@@ -1,0 +1,71 @@
+.main-form-block
+  max-width: 42%;
+  float left
+  background-color rgba(0, 0, 0, 0.52)
+  color #2c3039
+  font-family: "PT Sans", sans-serif;
+  display inline-block
+  outline 3px solid rgb(243, 211, 19)
+  outline-offset -15px
+  width 100%
+  margin-left 40px
+  min-height 350px
+  @media  (max-height: 768px) and (max-width : 1024px)
+    width 100%
+    max-width 410px
+    margin 0 auto
+    float none
+    display block
+  @media (max-width: 1100px)
+    margin-left 0
+  @media (max-width: 1175px)
+    min-height 385px
+  @media (max-width: 1050px)
+    min-height 390px
+  @media only screen and (min-device-width 481px) and (max-device-width: 1024px) and (orientation:portrait)
+    width 100%
+    max-width 410px
+    margin 0 auto
+    float none
+    display block
+    margin-left auto!important
+  @media only screen and (min-device-width 481px) and (max-device-width: 1024px) and (orientation:landscape)
+    width 100%
+    max-width 410px
+    margin 0 auto
+    float none
+    display block
+    margin-left auto!important
+  @media (max-width: 414px)
+    width 100%
+    min-height auto
+
+  &__block-inner
+    max-width 100%
+  @media (max-width: 1050px)
+    padding: 50px 0 0 0;
+  @media (max-width: 414px)
+    padding: 30px 0 0 0;
+
+  &__title
+    font-weight 300
+    font-size 28px
+    color #fcda14
+    text-align center
+    max-width 420px
+    margin 20px auto 0 auto
+    text-shadow 2px 4px 3px rgba(0,0,0,0.64)
+    @media (max-width: 414px)
+      font-size 20px
+      margin 0
+
+  &__desc
+    font-size 20px
+    margin-bottom 10px
+
+  &__phone, &__mail
+    color #2c3039
+    text-decoration none
+    font-weight bold
+
+

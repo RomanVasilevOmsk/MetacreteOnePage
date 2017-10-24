@@ -1,0 +1,38 @@
+.main-button
+  color #000
+  background-color #ffc200
+  font-family 'PT Sans', sans-serif
+  border 1px solid #ffc200
+  font-size 140%
+  line-height 1.5
+  padding 0.6em 3.1em
+  display inline-block
+  border-radius: 0.12em
+  max-width 300px
+  margin 40px auto 0 auto
+  box-shadow 0 0 10px rgba(0, 0, 0, 0.75)
+  text-transform uppercase
+  outline none
+  text-decoration none
+  @media (max-width: 555px)
+    max-width 200px
+    width 150px
+    font-size 100%
+    margin 50px auto 0 auto
+    display block
+
+  @media (max-width: 555px) and (max-height: 598px)
+    max-width 200px
+    width 150px
+    font-size 100%
+    margin 10px auto 0 auto
+    display block
+
+  &:hover
+    cursor pointer
+    //outline: 2px solid rgba(0,0,0,0.8); /* Пунктирная рамка */
+    //outline-offset: -7px; /* Выводим рамку внутри элемента */
+    background rgba(255,194,0,0.9)
+    -webkit-transition-property background
+    -webkit-transition-duration 0.3s
+    -webkit-transition-timing-function ease

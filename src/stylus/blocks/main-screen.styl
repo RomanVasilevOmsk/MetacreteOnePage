@@ -1,0 +1,41 @@
+.main-screen
+  background url(../images/main-bg.jpg) no-repeat fixed
+  width 100%
+  background-size cover
+  min-height 100vh
+  position relative
+  overflow hidden
+
+  &__inner
+    top 170px
+    position absolute
+    width 100%
+    @media  (max-height: 768px) and (max-width : 1024px)
+      top 110px
+
+  &__wrapper
+    background url(../images/title-bg.png) no-repeat
+    background-size cover
+    padding 35px 0
+    width 100%
+    max-width 940px
+    text-shadow 2px 4px 3px rgba(0, 0, 0, 0.64)
+    @media (max-width: 414px)
+      width 100%
+      margin 0 0 10px 0
+      padding 10px
+
+  &__title
+    font-family 'Roboto', sans-serif
+    text-align left
+    color #fcda14
+    max-width 760px
+    font-size 36px
+    font-weight 400
+    letter-spacing -0.01em
+    line-height 1.2em
+    margin: 0 auto;
+    @media  (max-height: 768px) and (max-width : 1024px)
+      font-size 28px
+    @media (max-width: 414px)
+      font-size 18px

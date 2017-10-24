@@ -1,0 +1,27 @@
+<!-- Modals -->
+<div class="overlay" id="js-overlay"></div>
+<div class="modal js-modal" id="js-modal1">
+    <h2 class="modal__title">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h2>
+    <p class="modal__desc"><?= timeUtm();?></p>
+
+    <form class="modal-form" action="succes.php" method="post">
+        <input class="modal-form__phone" type="text" name="phone" required="" placeholder="Ваш номер телефона">
+        <p class="modal-form__desc">Нажимая на кнопку, я даю <a href="soglashenie.pdf" target="_blank" class="modal-form__link">cогласие на обработку персональных данных</a></p>
+
+        <button class="button-form" type="submit">Заказать</button>
+
+        <input type="hidden" name="forma" value="Обратный звонок">
+        <input type="hidden" name="order_type" value="2">
+        <input type="hidden" name="utm_source" value="<?php echo isset($_GET['utm_source']) ? $_GET['utm_source'] : '' ;?>">
+        <input type="hidden" name="utm_medium" value="<?php echo isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '' ;?>">
+        <input type="hidden" name="utm_campaign" value="<?php echo isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : '' ;?>">
+        <input type="hidden" name="utm_term" value="<?php echo isset($_GET['utm_term']) ? $_GET['utm_term'] : '' ;?>">
+        <input type="hidden" name="utm_placement" value="<?php echo isset($_GET['utm_placement']) ? $_GET['utm_placement'] : '' ;?>">
+        <input type="hidden" name="utm_creative" value="<?php echo isset($_GET['utm_creative']) ? $_GET['utm_creative'] : '' ;?>">
+        <input type="hidden" name="utm_content" value="<?php echo isset($_GET['utm_content']) ? $_GET['utm_content'] : '' ;?>">
+        <input type="hidden" value="8838" name="time_spend"><input type="hidden" value="false" name="mobile">
+
+    </form>
+
+    <a href="#" class="modal__close js-modal-close"></a>
+</div>
