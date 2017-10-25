@@ -2,7 +2,7 @@
 <div class="overlay" id="js-overlay"></div>
 <div class="modal js-modal" id="js-modal1">
     <h2 class="modal__title">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h2>
-    <p class="modal__desc"><?= timeUtm();?></p>
+    <!--<p class="modal__desc"><?= timeUtm();?></p>-->
 
     <form class="modal-form" action="succes.php" method="post">
         <input class="modal-form__phone" type="text" name="phone" required="" placeholder="Ваш номер телефона">
@@ -10,7 +10,7 @@
 
         <button class="button-form" type="submit">Заказать</button>
 
-        <input type="hidden" name="forma" value="Обратный звонок">
+        <input type="hidden" name="forma" value="Одностраничник Metacrete (модальное окно)">
         <input type="hidden" name="order_type" value="2">
         <input type="hidden" name="utm_source" value="<?php echo isset($_GET['utm_source']) ? $_GET['utm_source'] : '' ;?>">
         <input type="hidden" name="utm_medium" value="<?php echo isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '' ;?>">

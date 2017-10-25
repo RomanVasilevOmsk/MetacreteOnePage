@@ -43,7 +43,7 @@ $mail->CharSet = 'UTF-8';
 $mail->addAddress('affcontext@mail.ru');
 $mail->addAddress('affleads55@gmail.com');
 
-$mail->Subject = 'Заявка с одностраничного сайта ('.$forma.')'; // тема письма
+$mail->Subject = 'Заявка с одностраничного сайта METACRETE('.$forma.')'; // тема письма
 $mail->isHTML(true);
 
 for($ct=0;$ct<count($_FILES['userfile']['tmp_name']);$ct++)
