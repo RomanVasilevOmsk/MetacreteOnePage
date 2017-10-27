@@ -6,7 +6,7 @@ $(document).ready(function(){
 
             var
                 // Мин. значение
-                min = el.data('min') || false,
+                min = el.data('min') || true,
 
                 // Макс. значение
                 max = el.data('max') || false,
@@ -75,7 +75,7 @@ $(document).ready(function(){
             priceAnalogTitle = "";
             sum = priceKg*valueBag*1000;
             priceAnalog = sum-((sum*40)/100);
-            difference = Math.round(sum - priceAnalog) +"руб.";
+            difference = Math.round(sum - priceAnalog) +" руб.";
             paramsTitle ="MasterEmacoN900";//Дефолтьный продукт
         }
         else{
@@ -109,22 +109,171 @@ $(document).ready(function(){
                 },
                 {}
             );
+
         //---------Вытаскиваем название аналога из адрессной строки-----------//
 
         switch (params['tema']) {
+            //Grand 15 T
+            case 'MasterEmacoS488':
+                priceKg = 32;
+                break;
+            case 'MapegroutThixotripic':
+                priceKg = 36;
+                break;
+            case 'Monotop612':
+                priceKg = 413;
+                break;
+
+            //Grand 15 L
+            case 'MasterEmacoS488PG':
+                priceKg = 31;
+                break;
+            case 'MapegroutHiFlow':
+                priceKg = 32;
+                break;
+
+            //Grand 17 T
+            case 'MasterEmacoS560FR':
+                priceKg = 67;
+                break;
+            case 'MapegroutMF':
+                priceKg = 54;
+                break;
+
+            //Grand 17 L
+            case 'MasterEmacoS540FR':
+                priceKg = 68;
+                break;
+            case 'MapegroutSF':
+                priceKg = 44;
+                break;
+
+            //Grand PM 20 T
+            case 'MasterEmacoS5300':
+                priceKg = 120;
+                break;
+
+            //Grand PM 25 T
+            case 'MasterEmacoS5400':
+                priceKg = 63;
+                break;
+            case 'MapegroutT60':
+                priceKg = 73;
+                break;
+
+            //Grand PM 25 L
+            case 'MasterEmacoS5450PG':
+                priceKg = 104;
+                break;
+
+            //Grand CEM (Inject EP 40)
+            case 'MasterEmacoA640':
+                priceKg = 65;
+                break;
+            case 'Stabilcem':
+                priceKg = 59;
+                break;
+
+            //Grand Epoxy
+            case 'Sikadur31CF':
+                priceKg = 1425;
+                break;
+
+            //Grand 56 T
+            case 'MasterEmacoT1100TIX':
+                priceKg = 70;
+                break;
+
+            //Grand 56 L
+            case 'MasterEmacoT1200PG':
+                priceKg = 68;
+                break;
+
+            //Grand 56 LF
+            case 'MasterEmacoT1400FR':
+                priceKg = 71;
+                break;
+            case 'MapegroutSVRFIBER':
+                priceKg = 54;
+                break;
+
+            //Grand 10 T
             case 'MasterEmacoN900':
-                priceKg = 30;
+                priceKg = 68;
                 break;
-            case 'MasterEmacoN901':
-                priceKg = 20;
+            case 'MapegroutFastSetR4':
+                priceKg = 39;
                 break;
-            case 'MasterEmacoN902':
-                priceKg = 10;
+            case 'Monotop615':
+                priceKg = 156;
                 break;
+
+            //Grand PM 10 T
+            case 'MasterEmacoN5200':
+                priceKg = 109;
+                break;
+            case 'Mapegrout430':
+                priceKg = 45;
+                break;
+
+            //Grand PM 12 T
+            case 'MasterEmacoN5100':
+                priceKg = 87;
+                break;
+            case 'Monotop620':
+                priceKg = 156;
+                break;
+
+            //Grand Fast
+            case 'PLANITOP400':
+                priceKg = 133;
+                break;
+
+            //Antikor AD
+            case 'MasterEmacoP5000AP':
+                priceKg = 223;
+                break;
+            case 'Mapefer1K':
+                priceKg = 202;
+                break;
+            case 'Monotop610':
+                priceKg = 145;
+                break;
+
+            //Epoxy Grund
+            case 'MonoTopArmatec':
+                priceKg = 536;
+                break;
+
+            //Anker 47
+            case 'SikaGrout314':
+                priceKg = 137;
+                break;
+
+            //Anker 55
+            case 'MasterFlow928':
+                priceKg = 45;
+                break;
+            case 'Mapefill':
+                priceKg = 46;
+                break;
+            case 'SikaGrout316':
+                priceKg = 56;
+                break;
+
+            //Anker 90
+            case 'MapegroutHiFlow10':
+                priceKg = 33;
+                break;
+            case 'SikaGrout318':
+                priceKg = 153;
+                break;
+
             default:
                 priceKg = 30;//Если нет ставим дефолтное значение дефолтного продукта
                 params['tema'] = "MasterEmacoN900";
         }
+
 
         $('#js-nameTitle')[0].innerHTML =params['tema'];
         $('#js-calculator__title-analog')[0].innerHTML =params['tema'];
