@@ -3,6 +3,7 @@
 $true_phone = preg_replace('/[^0-9]/', '', $phone);
 $true_phone = '+'.$true_phone;
 $utm_content = trim($_POST["utm_content"]);
+$utm_contentAll = trim($_POST["utm_content"]);
 if ($utm_content == "||") $utm_content = "";
 $utm_content = urldecode($utm_content);
 $utm_source = trim($_POST["utm_source"]);
@@ -14,6 +15,7 @@ $utm_term = urldecode($utm_term);
 $utm_campaign = trim($_POST["utm_campaign"]);
 if ($utm_campaign == "||") $utm_campaign = "";
 $utm_campaign = urldecode($utm_campaign);
+
 //$true_phone = $phone;
 $utm_content = explode("|", $utm_content);
 $utm_content_arr = Array();
@@ -211,14 +213,7 @@ if ($copy == 1){
 else
 	$text_copy = '';
 
-if( !empty( $city['city']) ){
-    $leadNameCity ="[".$city['city']."] ";
-}
-else{
-    $leadNameCity = "[ГородХ] ";
-}
-
-$lead_name = $leadNameCity;
+$lead_name = "Заявка с сайта";
 $roistat=isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : null;
 
 										
@@ -266,7 +261,7 @@ $leads['request']['leads']['add']=array(
 		'id'=>37894,
 		'values'=>array(
 		  array(
-			'value'=>429245
+			'value'=>$order_type
 		  )
 		)
 	  ),
@@ -288,6 +283,24 @@ $leads['request']['leads']['add']=array(
 		  )
 		)
 	  ),
+	   array(
+            #Нестандартное дополнительное поле "cid", которое мы создали
+            'id'=>203301,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["cid"]
+                )
+            )
+        ),
+	  array(
+          #Нестандартное дополнительное поле "utm_term", которое мы создали
+          'id'=>203299,
+          'values'=>array(
+              array(
+                  'value'=>$utm_contentAll
+              )
+          )
+      ),
 	  array(
 		#Нестандартное дополнительное поле "utm_term", которое мы создали
 		'id'=>37900,
